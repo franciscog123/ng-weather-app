@@ -2,6 +2,8 @@
 
 A weather forecast site created using the OpenWeather API and the Angular framework.
 
+Live Demo: https://franciscog123.github.io/ng-weather-app/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
