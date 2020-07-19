@@ -25,7 +25,7 @@
 /* give form field input flex display so fits on one line*/
 ::ng-deep .mat-form-field-infix.ng-tns-c46-0
 {
-    display: flex;
+    display: flex !important;
 }
 
 .mat-icon
@@ -38,7 +38,7 @@
 /*----------------- overriding mat form field styles start -------------*/
 /* mat-icon-stepper selected color change  */
 ::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
-    background-color: white important;
+    background-color: white !important;
 }
 
 /* //input outline color */
@@ -49,23 +49,23 @@
 
 /* //mat-input focused color */
 ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color:white important;
+    color:white !important;
 }
 
 /* // mat-input error outline color */
 ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
-    color: white important;
+    color: white !important;
     opacity: 0.8!important;
 }
 
 /* // mat-input carent color */
 ::ng-deep .mat-input-element {
-    caret-color: white important;
+    caret-color: white !important;
 }
 
 /* // mat-input error carent color */
 ::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
-    caret-color: white important;
+    caret-color: white !important;
 }
 
 /* mat-label normal state style */
@@ -76,17 +76,17 @@
 
 /* mat-label focused style */
 ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
-    color: white important;
+    color: white !important;
 }
 
 /* mat-label error style */
 ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-    color: white important;
+    color: white !important;
 }
 
 /** form field outline color**/
 ::ng-deep .mat-form-field-outline.mat-form-field-outline-thick.ng-tns-c46-0.ng-star-inserted
 {
-    color: white;
+    color: white !important;
 }
 /* ---------------------override mat form field styles end---------------------- */
