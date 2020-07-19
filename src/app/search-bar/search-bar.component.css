@@ -23,7 +23,7 @@
 }
 
 /* give form field input flex display so fits on one line*/
-::ng-deep .mat-form-field-infix.ng-tns-c46-0
+::ng-deep .mat-form-field-infix
 {
     display: flex !important;
 }
@@ -85,7 +85,7 @@
 }
 
 /** form field outline color**/
-::ng-deep .mat-form-field-outline.mat-form-field-outline-thick.ng-tns-c46-0.ng-star-inserted
+::ng-deep .mat-form-field-outline.mat-form-field-outline-thick
 {
     color: white !important;
 }
