@@ -1,0 +1,57 @@
+*
+{
+    color: white;
+}
+.mat-card
+{
+    width: 60%;
+    background-color: #424242;
+}
+
+.card-wrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temp
+{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.temp-icon-wrapper{
+    display: inline-flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+/* font size for icons */
+i[class^="wi-"], i[class*="wi-"] {
+    font-size: 100px;
+}
+
+.mat-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left
+{
+    margin-right: auto;
+}
+
+.humid-wind-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}

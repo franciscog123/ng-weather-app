@@ -1,0 +1,19 @@
+<div class="card-wrapper">
+    <mat-card class="card">
+        <mat-card-title class="left">{{ currentWeather$.name }}</mat-card-title>
+        <mat-card-subtitle class="left">{{todaysDataTime}}</mat-card-subtitle>
+        <mat-card-subtitle>{{currentWeather$.weather[0].description}}</mat-card-subtitle>
+        <div class="temp-icon-wrapper">
+            <div class="temp">{{currentWeather$.main.temp | number:'.0-0'}}&deg;F&nbsp;</div>
+            <i class="wi wi-night-sleet"></i>
+        </div>    
+        <mat-card-content>Feels like {{currentWeather$.main.feels_like | number:'.0-0'}}&deg;</mat-card-content>
+        <!-- <mat-card-content>Humidity: {{currentWeather$.main.humidity | number:'.0-0'}}%</mat-card-content>
+        <mat-card-content>Wind: {{currentWeather$.wind.speed | number:'.0-0'}} mph</mat-card-content> -->
+        <div class="humid-wind-wrapper">
+            <div>Humidity: {{currentWeather$.main.humidity | number:'.0-0'}}%</div>
+            <div>Wind: {{currentWeather$.wind.speed | number:'.0-0'}} mph</div>
+        </div>
+    </mat-card>
+</div>
+

@@ -25,7 +25,8 @@
             ],
             "styles": [
               "src/custom-theme.scss",
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/weather-icons.min.css"
             ],
             "scripts": []
           },
