@@ -28,7 +28,7 @@ export class WeatherService {
 
   getCurrentWeatherResponse(location:string): Observable<CurrentWeather> {
     return this.http.get<CurrentWeather>(
-      `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${this.apiKey}&units=imperial`, this.options)
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${this.apiKey}&units=imperial`, this.options)
     .pipe(
       retry(3),
       tap(data => console.log(data)),
