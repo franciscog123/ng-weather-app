@@ -4,7 +4,7 @@
 }
 .mat-card
 {
-    width: 60%;
+    width: 65%;
     background-color: #424242;
 }
 
@@ -30,11 +30,11 @@
     justify-content: center;
     text-align: center;
     height: 100%;
-    margin-bottom: 30px;
+    margin: 30px auto;
 }
 
 /* font size for icons */
-i[class^="wi-"], i[class*="wi-"] {
+i[class^="wi"], i[class*="wi"] {
     font-size: 100px;
 }
 
@@ -43,6 +43,7 @@ i[class^="wi-"], i[class*="wi-"] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 10px;
 }
 
 .left
@@ -54,4 +55,10 @@ i[class^="wi-"], i[class*="wi-"] {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    font-size: 14px;
+}
+
+.description
+{
+    font-size: 20px;
 }
