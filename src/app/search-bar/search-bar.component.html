@@ -5,6 +5,6 @@
         </mat-form-field>
 </form>
 
-<app-main-weather-card *ngIf="currentWeather$" [currentWeather$]=currentWeather$ [latitude]=latitude [longitude]=longitude></app-main-weather-card>
-<app-seven-day-forecast></app-seven-day-forecast>
+<app-main-weather-card *ngIf="currentWeather$" [currentWeather$]=currentWeather$ ></app-main-weather-card>
+<app-seven-day-forecast *ngIf="forecast$" [forecast$]=forecast$></app-seven-day-forecast>
   

@@ -15,29 +15,39 @@ export class SearchBarComponent implements OnInit {
   })
 
   currentWeather$:CurrentWeather;
+  forecast$;
+
   placesAutocomplete;
-  latitude;
-  longitude;
 
   constructor(private weatherService: WeatherService
     ) { }
 
   ngOnInit(): void {
     this.createAutoComplete();
+    
     let myClass=this; //getting scope of class to pass into below function and call the class function
+    let latitude;
+    let longitude;
 
      this.placesAutocomplete.on('change', function(e) {
        let latLong = e.suggestion.latlng;
-       myClass.latitude = latLong.lat;
-       myClass.longitude = latLong.lng;
-       myClass.submitRequest(myClass.latitude,myClass.longitude);
+       latitude = latLong.lat;
+       longitude = latLong.lng;
+       myClass.requestCurrentWeather(latitude,longitude);
+       myClass.requestForecast(latitude,longitude);
+       myClass.searchForm.get('inputBar').reset();
      });
+
   }
 
-  submitRequest(lat, long):void{
+  requestCurrentWeather(lat, long):void{
     this.weatherService.getCurrentWeatherByLatLong(lat, long)
     .subscribe((data) => this.currentWeather$ = data);
-    this.searchForm.get('inputBar').reset();
+  }
+
+  requestForecast(lat,long):void {
+    this.weatherService.get7DayForecast(lat,long)
+      .subscribe((data) => this.forecast$ = data);
   }
 
   createAutoComplete(){

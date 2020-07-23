@@ -18,32 +18,22 @@ export class WeatherService {
   
   constructor(private http: HttpClient) { }
 
-  /*nontyped get weather method (type:any)
-  getCurrentWeatherResponse() {
-    return this.http.get(this.currentWeatherUrl)
-     .pipe(
-       tap(data => console.log(data))
-     );
-  }*/
-
-  getCurrentWeatherResponse(location:string): Observable<CurrentWeather> {
-    return this.http.get<CurrentWeather>(
-      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${this.apiKey}&units=imperial`, this.options)
-    .pipe(
-      retry(3),
-      tap(data => console.log(data)),
-      catchError(this.handleError)
-    );
-  }
-
   getCurrentWeatherByLatLong(lat,long): Observable<CurrentWeather> {
     return this.http.get<CurrentWeather>(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${this.apiKey}&units=imperial`, this.options)
       .pipe(
         retry(3),
-        tap(data => console.log(data)),
         catchError(this.handleError)
       );
+  }
+
+  get7DayForecast(lat, long)
+  {
+    return this.http.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=current,minutely,hourly&appid=${this.apiKey}&units=imperial`,this.options)
+    .pipe(
+      retry(3),
+      catchError(this.handleError)
+    );
   }
 
   private handleError(error: HttpErrorResponse) {

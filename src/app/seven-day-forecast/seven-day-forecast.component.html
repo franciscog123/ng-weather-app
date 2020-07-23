@@ -1,0 +1,10 @@
+<h2 class="heading">7 Day Forecast</h2>
+
+<div class="cardsContainer">
+    <div class="card" *ngFor="let day of forecast$.daily | slice:1; let i = index"> <!-- skip the first element in ngfor-->
+        <p>{{ day.dt * 1000 | date:'MMM d' }}</p>
+            <p>{{ day.weather[0].description }}</p>
+            <div class="wi" [ngClass]="constructClass(i)"></div>
+            <p>{{day.temp.max | number:'.0-0'}}&deg;F&nbsp;/{{day.temp.min | number:'.0-0'}}&deg;F&nbsp;</p>
+    </div>
+</div>
