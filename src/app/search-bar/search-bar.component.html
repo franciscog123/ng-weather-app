@@ -1,13 +1,10 @@
-<form class="input-wrapper" [formGroup] ="searchForm" (ngSubmit)="onSubmit()">
+<form class="input-wrapper" [formGroup] ="searchForm">
     <mat-form-field appearance ="outline" color="primary">
-            <mat-label >Input a location in the format: city, state, country</mat-label>
-            <input matInput type="search" formControlName="inputBar">
-            <!-- <mat-placeholder class="place">houston, tx, us</mat-placeholder> -->
-                <button type ="submit" mat-button color="accent" mat-icon-button >
-                    <mat-icon>search</mat-icon>
-                </button>
+            <mat-label >Input a city</mat-label>
+            <input matInput class="myInput" placeholder="houston" type="search" formControlName="inputBar">
         </mat-form-field>
 </form>
 
-<app-main-weather-card *ngIf="currentWeather$" [currentWeather$]=currentWeather$></app-main-weather-card>
+<app-main-weather-card *ngIf="currentWeather$" [currentWeather$]=currentWeather$ [latitude]=latitude [longitude]=longitude></app-main-weather-card>
+<app-seven-day-forecast></app-seven-day-forecast>
   

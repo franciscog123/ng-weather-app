@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { MainWeatherCardComponent } from './main-weather-card/main-weather-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SevenDayForecastComponent } from './seven-day-forecast/seven-day-forecast.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     FooterComponent,
     SearchBarComponent,
     MainWeatherCardComponent,
+    SevenDayForecastComponent,
   ],
   imports: [
     BrowserModule,

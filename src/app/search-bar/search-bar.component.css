@@ -13,6 +13,9 @@
     width: 80%;
 } 
 
+#address-value
+{
+background-color: black;}
 
 /* make input smaller */
 ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
@@ -91,6 +94,12 @@
 }
 /* ---------------------override mat form field styles end---------------------- */
 
-/* mat-focused .place {
-    color: white;
-} */
+
+::ng-deep .mat-input-element::placeholder{
+    color: white !important;
+}
+
+::ng-deep #algolia-places-listbox-0
+{
+    color: black !important;
+}

@@ -10,6 +10,9 @@ import { WeatherIcons } from '../weather-icons';
 export class MainWeatherCardComponent implements OnInit {
 
   @Input() currentWeather$;
+  @Input() latitude;
+  @Input() longitude;
+  @Input() forecast7Day$;
   today= new Date();
   todaysDataTime = '';
 

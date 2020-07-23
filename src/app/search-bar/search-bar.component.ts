@@ -15,18 +15,40 @@ export class SearchBarComponent implements OnInit {
   })
 
   currentWeather$:CurrentWeather;
-  
-  constructor(private weatherService: WeatherService) { }
+  placesAutocomplete;
+  latitude;
+  longitude;
+
+  constructor(private weatherService: WeatherService
+    ) { }
 
   ngOnInit(): void {
+    this.createAutoComplete();
+    let myClass=this; //getting scope of class to pass into below function and call the class function
+
+     this.placesAutocomplete.on('change', function(e) {
+       let latLong = e.suggestion.latlng;
+       myClass.latitude = latLong.lat;
+       myClass.longitude = latLong.lng;
+       myClass.submitRequest(myClass.latitude,myClass.longitude);
+     });
   }
 
-  onSubmit(): void{
-    // this.weatherService.getCurrentWeatherResponse()
-    // .subscribe((data) => this.location = data);
-    this.weatherService.getCurrentWeatherResponse(this.searchForm.get('inputBar').value)
+  submitRequest(lat, long):void{
+    this.weatherService.getCurrentWeatherByLatLong(lat, long)
     .subscribe((data) => this.currentWeather$ = data);
     this.searchForm.get('inputBar').reset();
+  }
+
+  createAutoComplete(){
+    this.placesAutocomplete = places({
+      appId: 'pl2IBBNA1I8V',
+      apiKey: '0ed1e4c7568741e64c757b71eaa8bb63',
+      container: document.querySelector('.myInput')
+    }).configure({
+      type:'city', // Search only for cities names
+      aroundLatLngViaIP: false, // disable the extra search/boost around the source IP
+    });
   }
 
 }

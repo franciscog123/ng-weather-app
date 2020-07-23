@@ -1,6 +1,6 @@
 # NgWeatherApp
 
-A weather forecast site created using the OpenWeather API and the Angular framework.
+A weather forecast site created using the OpenWeather API, Algolia Places, and the Angular framework.
 
 Live Demo: https://franciscog123.github.io/ng-weather-app/
 

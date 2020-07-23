@@ -28,7 +28,9 @@
               "src/styles.css",
               "src/assets/css/weather-icons.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/places.js/dist/cdn/places.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,7 +94,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/places.js/dist/cdn/places.min.js"
+            ]
           }
         },
         "lint": {
