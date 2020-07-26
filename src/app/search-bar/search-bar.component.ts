@@ -30,12 +30,13 @@ export class SearchBarComponent implements OnInit {
     let longitude;
 
      this.placesAutocomplete.on('change', function(e) {
-       let latLong = e.suggestion.latlng;
-       latitude = latLong.lat;
-       longitude = latLong.lng;
-       myClass.requestCurrentWeather(latitude,longitude);
-       myClass.requestForecast(latitude,longitude);
-       myClass.searchForm.get('inputBar').reset();
+        let latLong = e.suggestion.latlng;
+        latitude = latLong.lat;
+        longitude = latLong.lng;
+        myClass.requestCurrentWeather(latitude,longitude);
+        myClass.requestForecast(latitude,longitude);
+        myClass.searchForm.get('inputBar').reset();
+        myClass.placesAutocomplete.setVal('')
      });
 
   }
