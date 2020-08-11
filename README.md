@@ -2,7 +2,9 @@
 
 A weather forecast site created using the OpenWeather API, Algolia Places, and the Angular framework.
 
-Live Demo: https://franciscog123.github.io/ng-weather-app/
+Hosted on AWS
+
+Live Demo: http://franciscog-weather-app.s3-website.us-east-2.amazonaws.com/
 
 ## Development server
 
